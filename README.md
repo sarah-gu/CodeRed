@@ -1,5 +1,5 @@
 # BlairHacks_3-2019 #CodeRed
-### Winner of Organizer's Choice Award
+### Winner of Organizer's Choice Award at Montgomery Blair Hackathon 2019
 ## How to Run
 The file blairhackFinal.py documents the neural network built with Keras that classifies whether a given MP3 file contains gunshot noises or not. This model is pre-trained and saved to models.h5 inside the models directory. Inside realSite, the file codeRedFinal.py utilized Flask along with Tensorflow to load the pre-trained model and predict whether the user inputted file contains gunshot noises or not. **When codeRedFinal.py is run, the Machine Learning portion of the website is live on your localhost.**
 ## Inspiration
