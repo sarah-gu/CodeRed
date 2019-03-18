@@ -1,0 +1,27 @@
+/*REAL FOOTER*/
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+   height:100%;
+}
+#header {
+   background:lightgrey;
+   padding:10px;
+}
+#body {
+   padding:20px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:absolute; 
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:lightgrey;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="/templates/footer.css">
+   <link rel="stylesheet" type="text/css" href="/templates/nav_bar.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <style type="text/css" media="all">
+@import url("https://www.gunviolencearchive.org/sites/all/modules/contrib/date/date_api/date.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/modules/field/theme/field.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/modules/node/node.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/modules/user/user.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/sites/all/modules/contrib/views/css/views.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/sites/all/modules/contrib/ckeditor/css/ckeditor.css?pn5gtb");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.gunviolencearchive.org/sites/all/modules/contrib/ctools/css/ctools.css?pn5gtb");
+</style>
+<link type="text/css" rel="stylesheet" href="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.css" media="all" />
+<link rel="stylesheet" type="text/css" href="../css/nav_bar.css">
+<style type="text/css" media="all">
+@import url("https://www.gunviolencearchive.org/sites/all/modules/gva_interactive_maps/bower_components/leaflet.markercluster/dist/MarkerCluster.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/sites/all/modules/gva_interactive_maps/bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/sites/all/themes/gva_theme/compiled/default.css?pn5gtb");
+@import url("https://www.gunviolencearchive.org/sites/all/themes/gva_theme/compiled/font-awesome.min.css?pn5gtb");
+</style>
+<link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" media="all" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js?pn5gtb"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js?pn5gtb"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js?pn5gtb"></script>
+<script type="text/javascript" src="https://www.gunviolencearchive.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.gunviolencearchive.org/misc/drupal.js?pn5gtb"></script>
+<script type="text/javascript" src="https://d19vzq90twjlae.cloudfront.net/leaflet-0.7.3/leaflet.js?pn5gtb"></script>
+<script type="text/javascript" src="js/incidents.js"></script>
+<script type="text/javascript" src="https://www.gunviolencearchive.org/sites/all/modules/gva_interactive_maps/bower_components/leaflet.markercluster/dist/leaflet.markercluster.js?pn5gtb"></script>
+<script type="text/javascript" src="https://www.gunviolencearchive.org/sites/all/modules/contrib/google_analytics/googleanalytics.js?pn5gtb">
+   
+</script>
+<script type="text/javascript"></script>
+   </head>
+   
+   <div class="top-nav">
+       <ul class="top-horizontal">
+           <li class="top-menu lefty"><a href="https://shootings.sites.tjhsst.edu/"><img width="120" height="70" src="/templates/code_red.png" alt="logo"></a></li>
+           <li class="top-menu lefty"><a href="https://shootings.sites.tjhsst.edu/map">Interactive Map</a></li>
+           <li class="top-menu lefty"><a href="https://shootings.sites.tjhsst.edu/findme">Learn About Your State</a></li>
+           <li class="top-menu lefty"><a href="https://shootings.sites.tjhsst.edu/game">Test Yourself</a></li>
+           <li class="top-menu lefty"><a href="http://10.72.69.7/upload">Check Audio</a></li>
+       </ul>
+   </div>
+
+   <br>
+   <h1 align="center">Gunshot Sound Detection with <b>Machine Learning</b> and <b>Keras</b></h1>
+
+
+
+   <div id="body" style="float:left">
+   <h2>Submit your MP3 here</h2>
+      <form action = "http://192.168.1.160/upload" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>
+      <h3>Flagged MP3 Submission Count: {{counter}}/{{total}}</h3>
+      <h3>Previous mp3's inputted: </h3>
+      <ol>
+      	{% for item in results %}
+      	<ul>
+      		{{item}}
+      	</ul>
+      	{% endfor %}
+      </ol>
+    </div>
+<br><br><br>
+    <div style="float:right">
+         <img src="/templates/kerasImg.png" alt="Keras Model Image" height="300" width = "600"/>
+   </div>
+   <div style="float:right; height:30px; width:600px">
+      <p style="background-color:lightgray">Above is the model of the Neural Network classifying the MP3 files. It is comprised of one LSTM layer and three Dense layers. </p>
+   </div>
+   <div id ="footer">This web app uses a backend with a pre-trained Long Short Term Memory Neural Network to classify whether or not your mp3 has graphic sounds. Flask, Libros, and Keras are used to tie together HTML and Python. Feel free to view our source code for more information on how we made this Machine Learning Project. </div>
+
+</html>
