@@ -1,0 +1,102 @@
+/*----------------------------------------------*/
+/*PAGE BODY ITSELF*/
+body {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    bottom: auto;
+    margin: 0px;
+}
+
+.title{
+    font:Impact;
+    background: pink;
+ color:red;
+}
+
+/*----------------------------------------------*/
+/*TOP NAV*/
+
+div.top-nav {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+    height: 50px;
+    width: 100%;
+}
+
+ul.top-horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+
+/*float li's left*/
+.lefty {
+    float: left;
+}
+
+/*float li's right*/
+.righty {
+    float: right;
+}
+
+.top-menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.top-menu a:hover {
+    background-color: red;
+    color: black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+.button{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+p {
+  background: pink;
+  border: 3px purple;
+  padding: 10px;
+  margin: 30px;
+}
+
+
+
+.right {
+  float: right;
+  background: cyan;
+}
+
+.none {
+  float: none;
+  background: pink;
+}
+/*----------------------------------------------*/
+/*CONTENT DIV*/
+/*margin is the space between this element and other elements*/
+/*padding is the space the content within this element and the outside edge of the element*/
+
+div.content {
+    margin: 8px;
+}
